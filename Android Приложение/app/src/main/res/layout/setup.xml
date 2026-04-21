@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/mainCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="251dp"
+            android:foreground="@drawable/banner"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Meklē ierīci..."
+                android:paddingBottom="16dp"
+                android:textColor="#149a5c"
+                android:textSize="28sp"
+                android:textStyle="bold"/>
+
+            <ProgressBar
+                android:id="@+id/pbScanning"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="14dp"
+                android:indeterminate="true"
+                android:indeterminateTint="#149a5c"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvStatus" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnTalak"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TALAK"
+                android:enabled="false"
+                app:backgroundTint="#BDBDBD"
+                app:cornerRadius="16dp" />
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <ImageView
+        android:id="@+id/ivSMULogo"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:contentDescription="SMU Logo"
+        android:src="@drawable/smu"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
